@@ -227,7 +227,8 @@ while True:
         if (event.type == SPAWNPIPE) and GAME_ACTIVE:
             pipe_rect_list.extend(create_pipe_set())
             score += 1
-            score_sound.play()
+            if SOUND:
+                score_sound.play()
 
         # flap bird wings
         if event.type == BIRDFLAP:
